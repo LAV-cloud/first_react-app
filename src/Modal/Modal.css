@@ -1,0 +1,201 @@
+.modal-btnOpen {
+  margin: 20px 0px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow-y: auto;
+  animation: appearModal 0.3s ease;
+}
+
+.modal-body {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+  animation: appearModalBody 0.3s ease;
+}
+
+@keyframes appearModal {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes appearModalBody {
+  0% {
+    top: 0px;
+    min-width: 1px;
+    max-width: 1px;
+    opacity: 0;
+  }
+  100% {
+    top: 50%;
+    min-width: 300px;
+    max-width: 600px;
+    opacity: 1;
+  }
+}
+
+.modal-form {
+  max-width: 400px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-other {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-label {
+  margin: 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.modal-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-input {
+  border: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+}
+
+.modal-stage {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-stage input {
+  border: none;
+  background: 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+}
+
+.modal-switch {
+  width: 50px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-label input[type='checkbox']:checked ~ .modal-switch::after {
+  background-color: seagreen;
+  left: 5px;
+}
+
+.modal-switch::after {
+  position: absolute;
+  left: 35px;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background-color: gray;
+}
+
+.modal-btnDelete {
+  border: none;
+  background: 0 0;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal-btnDelete:hover {
+  cursor: pointer;
+}
+
+.modal-btnClose {
+  border: none;
+  font-size: 18px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.modal-btnClose:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-btnCreate {
+  border: none;
+  background: rgb(39, 135, 245);
+  font-size: 18px;
+  color: white;
+  padding: 0.7rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-btnCreate:hover {
+  cursor: pointer;
+}
+
+.modal-btnSubmit {
+  margin-top: 30px;
+  border: 2px solid seagreen;
+  color: seagreen;
+  background: 0 0;
+  border-radius: 20px;
+  padding: 0.5rem 2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.modal-btnSubmit:hover {
+  cursor: pointer;
+  background: seagreen;
+  color: white;
+}
